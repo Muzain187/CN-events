@@ -1,0 +1,81 @@
+<div class="card-header">
+  <!-- CODING_EVENT, WEBINAR, BOOTCAMP_EVENT, WORKSHOP, ALL_EVENTS -->
+    <ul class="nav  ">
+      <li class="nav-item">
+        <a class="nav-link active category" aria-current="true" href="#" (click)="Events('ALL_EVENTS')">All Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active category" href="#" (click)="Events('WEBINAR')">Webinar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active category"href="#" (click)="Events('CODING_EVENT')">Coding Events</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link active category"  href="#"(click)="Events('BOOTCAMP_EVENT')">Boot camp</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link active category" href="#" (click)="Events('WORKSHOP')">Workshop</a>
+      </li>
+    </ul>
+</div>
+<div class="card-header">
+  <!--  ‘Upcoming’, ‘Archived’ and ‘All Time Favorites’
+ -->
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link  subcategory" aria-current="true" href="#" (click)="SubEvents('Upcoming')">Upcoming</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active subcategory" href="#" (click)="SubEvents('Archieved')">Archived</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active subcategory"  href="#" (click)="SubEvents('All%20Time%20Favorites')">All Time favorites</a>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="margin-left: 2em;margin-top: 2em;background-color: #fa7328;color: whitesmoke;">
+    Filter
+  </button>
+</div>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Tag List</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <mat-button-toggle-group  [(ngModel)]="Tags" multiple>
+            <div style="display: flex;flex-wrap: wrap;">
+              <div *ngFor="let tag of this.httpService.Tagobj" style="margin-right: 2em;border-radius:2px" >
+                <mat-button-toggle value={{tag}}  style="background-color: rgb(211, 211, 211) ;color: gray" (click)="TagEvents(Tags)" >
+                  {{tag}}
+                </mat-button-toggle>
+                <br>
+              </div>
+
+            </div>
+            
+          </mat-button-toggle-group>
+            <br />
+            <!-- You have selected : {{Tags}} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="EventShow container">
+  <div class="container">
+    <app-landing></app-landing>
+  </div>
+</div>

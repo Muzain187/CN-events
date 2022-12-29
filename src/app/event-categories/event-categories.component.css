@@ -1,0 +1,27 @@
+.mat-button-toggle{
+    border: 2px solid gray;
+    border-radius: 2em;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    color: gray;
+}
+a:checked{
+    background-color: red;
+}
+a:focus {
+    outline: 0; 
+   }
+.mat-button-toggle-checked {
+    background-color: #fa7328 !important;
+    color: rgb(250, 245, 245) !important;
+    border: 2px solid #fa7328 !important;
+}
+.EventShow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,26 @@
+<div style="display: flex;flex-wrap:wrap;" class="container">
+  <div class="card-body" *ngFor="let obj of evntobj.AllEvents | paginate: 
+  { itemsPerPage: 6, currentPage: p }" style="width: 30em;">
+    <div class="card-group">
+        <div class="card" style="display: flex; flex-wrap: wrap; ">
+          <img src={{obj.cover_picture}} class="card-img-top" alt="..." style="height: 15em;">
+          <div class="card-body" style="height: 18em;width:50%;">
+            <h3 class="card-title">{{obj.name}}</h3>
+            <div style="display:flex;flex-direction:row; justify-content: space-between;">
+              <p>Entry fee:{{obj.fees}}</p>
+              <p>venue:{{obj.venue}}</p>
+            </div>
+            <p class="card-text">{{obj.short_desc}}</p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>
+<pagination-controls 
+(pageChange)="p = $event" 
+class="float-right">
+</pagination-controls>
+<!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator> -->
+
+
