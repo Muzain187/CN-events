@@ -13,6 +13,14 @@ a:checked{
 a:focus {
     outline: 0; 
    }
+
+button{
+    border: none;
+}
+button:hover{
+    color: #fa7328;
+}
+
 .mat-button-toggle-checked {
     background-color: #fa7328 !important;
     color: rgb(250, 245, 245) !important;

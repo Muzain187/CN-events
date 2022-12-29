@@ -2,19 +2,19 @@
   <!-- CODING_EVENT, WEBINAR, BOOTCAMP_EVENT, WORKSHOP, ALL_EVENTS -->
     <ul class="nav  ">
       <li class="nav-item">
-        <a class="nav-link active category" aria-current="true" href="/" (click)="Events('ALL_EVENTS')">All Events</a>
+        <button type="button" class="btn nav-link active category" aria-current="true"  (click)="Events('ALL_EVENTS')">All Events</button>
       </li>
       <li class="nav-item">
-        <a class="nav-link active category" href="/" (click)="Events('WEBINAR')">Webinar</a>
+        <button type="button" class="btn nav-link active category"  (click)="Events('WEBINAR')">Webinar</button>
       </li>
       <li class="nav-item">
-        <a class="nav-link active category"href="/" (click)="Events('CODING_EVENT')">Coding Events</a>
+        <button type="button" class="btn nav-link active category"(click)="Events('CODING_EVENT')">Coding Events</button>
       </li>
       <li class="nav-item">
-          <a class="nav-link active category"  href="/"(click)="Events('BOOTCAMP_EVENT')">Boot camp</a>
+          <button type="button" class="btn nav-link active category" (click)="Events('BOOTCAMP_EVENT')">Boot camp</button>
       </li>
       <li class="nav-item">
-          <a class="nav-link active category" href="/" (click)="Events('WORKSHOP')">Workshop</a>
+          <button type="button" class="btn nav-link active category"  (click)="Events('WORKSHOP')">Workshop</button>
       </li>
     </ul>
 </div>
@@ -23,13 +23,13 @@
  -->
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link  subcategory" aria-current="true" href="/" (click)="SubEvents('Upcoming')">Upcoming</a>
+      <button type="button" class="btn  subcategory" aria-current="true" (click)="SubEvents('Upcoming')">Upcoming</button>
     </li>
     <li class="nav-item">
-      <a class="nav-link active subcategory" href="/" (click)="SubEvents('Archieved')">Archived</a>
+      <button type="button" class="btn  active subcategory"  (click)="SubEvents('Archieved')">Archived</button>
     </li>
     <li class="nav-item">
-      <a class="nav-link active subcategory"  href="/" (click)="SubEvents('All%20Time%20Favorites')">All Time favorites</a>
+      <button type="button" class="btn  active subcategory"   (click)="SubEvents('All%20Time%20Favorites')">All Time favorites</button>
     </li>
   </ul>
 </div>
